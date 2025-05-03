@@ -9,7 +9,7 @@ const server = http.createServer(app);
 // Get allowed origins from environment variable, split by comma, or default
 // Ensure the Vercel URL and localhost are included.
 const defaultOrigins = "http://localhost:9005,https://instagram-clone-ug7f.vercel.app"; // Add your Vercel URL here and localhost
-const allowedOrigins = (process.env.CORS_ORIGIN || defaultOrigins).split(',');
+const allowedOrigins = (defaultOrigins).split(',');
 console.log("Allowed CORS Origins:", allowedOrigins);
 
 const io = new Server(server, {
